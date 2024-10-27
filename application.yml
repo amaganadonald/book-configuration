@@ -7,6 +7,8 @@ spring:
   cloud:
     discovery:
       enabled: true
+    config:
+      enabled: true
 
   jpa:
     hibernate:
@@ -20,6 +22,10 @@ spring:
     show-sql: true
 
 management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
   health:
     refresh:
       enabled: true
@@ -32,6 +38,8 @@ logging:
           jdbc:
             bind: TRACE
 eureka:
+  instance:
+    prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://eureka-server:8761/eureka/
+      defaultZone: ${DISCOVERY-SERVICE-URL}:http://localhost:8761/eureka/
