@@ -15,10 +15,10 @@ spring:
         - id: r1
           uri: lb://SETTINGS-SERVICE
           predicates:
-            - Path: /api/v1/address/**
+          - Path=/api/v1/address/**
         - id: r2
           uri: lb://LIBRARY-SERVICE
           predicates:
-            - Path: /api/v1/library/**
+          - Path=/api/v1/library/**
   config:
     import: optional:configserver:${CONFIG_SERVICE_URI}
