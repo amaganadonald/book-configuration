@@ -2,11 +2,11 @@ library:
   params:
     x: 3
     y: 4
-  spring:
-    datasource:
-      url: ${SPRING_DATASOURCE2_URL}
-      username: ${SPRING_DATASOURCE2_USERNAME}
-      password: ${SPRING_DATASOURCE2_PASSWORD}
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE2_URL}
+    username: ${SPRING_DATASOURCE2_USERNAME}
+    password: ${SPRING_DATASOURCE2_PASSWORD}
 
 resilience4j:
   circuitbreaker:
